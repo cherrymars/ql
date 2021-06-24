@@ -42,14 +42,7 @@ fi
 echo -e "======================6. 启动JDC========================\n"
 if [[ $ENABLE_WEB_JDC == true ]]; then
         pm2 start JDC
-        if [[ $? -eq 0 ]]; then
-            echo -e "JDC面板启动成功...\n"
-        else
-            echo -e "JDC面板启动失败，但容器将继续启动...\n"
-        fi
-    else
-        echo -e "控制面板正在运行中...\n"
-    fi
+        echo -e "JDC面板启动成功...\n"
 elif [[ $ENABLE_WEB_JDC == false ]]; then
     echo -e "已设置为不自动启动JDC面板，跳过...\n"
 fi
